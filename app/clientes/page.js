@@ -1,40 +1,41 @@
 "use client";
+import React from "react";
 import {
-  RiFileUserLine,
   RiFolder5Line,
   RiEdit2Line,
   RiDeleteBin6Line,
   RiAddCircleFill,
+  RiUserLocationFill,
 } from "react-icons/ri";
-export const Usuarios = () => {
+
+export const Clientes = () => {
   const data = [
     {
       id: 1,
       nombre: "Beetlejuice",
-      apellidos: "Beetlejuice Apellidos",
-      email: "Beetlejuice@beetlejuice.com",
+      direccion: "Sonora",
+      ciudad: "Hermosillo",
       telefono: "9298765432",
-      rol: "Admin",
+      email: "beetlejuice@gmail.com",
       status: "Activo",
     },
     {
       id: 2,
-      nombre: "Beetlejuice",
-      apellidos: "Beetlejuice Apellidos",
-      email: "Beetlejuice@beetlejuice.com",
+      nombre: "Beetlejuice 2",
+      direccion: "Sonora 2",
+      ciudad: "Hermosillo 2",
       telefono: "9298765432",
-      rol: "Admin",
+      email: "beetlejuice@gmail.com",
       status: "Activo",
     },
   ];
-
   return (
     <div>
       <div className="flex items-center gap-3 p-2 lg:p-6 md:p-4">
         <span>
-          <RiFileUserLine className="text-3xl" />
+          <RiUserLocationFill className="text-3xl" />
         </span>
-        <h2 className="text-2xl">USUARIOS</h2>
+        <h2 className="text-2xl">CLIENTES</h2>
         <button className="flex items-center bg-[#7C081A] p-2 rounded-md text-white gap-3">
           <span>
             <RiAddCircleFill />
@@ -44,7 +45,7 @@ export const Usuarios = () => {
       </div>
       {/* table */}
       <div className="overflow-x-auto pl-8 pr-8">
-        <table className="min-w-full divide-y divide-x divide-gray-200">
+        <table className="min-w-full divide-y divide-x divide-gray-200  ">
           <thead>
             <tr>
               <th className="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider border">
@@ -54,16 +55,16 @@ export const Usuarios = () => {
                 Nombre
               </th>
               <th className="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider border">
-                Apellidos
+                Dirección
               </th>
               <th className="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider border">
-                Email
+                Ciudad
               </th>
               <th className="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider border">
                 Telefono
               </th>
               <th className="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider border">
-                Rol
+                Email
               </th>
               <th className="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider border">
                 Estatus
@@ -83,22 +84,22 @@ export const Usuarios = () => {
                   {item.nombre}
                 </td>
                 <td className="px-6 py-4 whitespace-no-wrap text-sm border">
-                  {item.apellidos}
+                  {item.direccion}
                 </td>
                 <td className="px-6 py-4 whitespace-no-wrap text-sm border">
-                  {item.email}
+                  {item.ciudad}
                 </td>
                 <td className="px-6 py-4 whitespace-no-wrap text-sm border">
                   {item.telefono}
                 </td>
                 <td className="px-6 py-4 whitespace-no-wrap text-sm border">
-                  {item.rol}
+                  {item.email}
                 </td>
                 <td className="px-6 py-4 whitespace-no-wrap text-sm border">
                   {item.status}
                 </td>
-                <td className="px-6 py-4 whitespace-no-wrap gap-2 flex items-center border">
-                  <button className="p-2 bg-[#17A2B8] rounded-md">
+                <td className="px-6 py-4 whitespace-no-wrap gap-2 flex items-center text-sm border">
+                  <button className="p-2 bg-[#17A2B8] rounded-md ">
                     <RiFolder5Line className="text-white" />
                   </button>
                   <button className="p-2 bg-green-400 rounded-md">
@@ -117,4 +118,4 @@ export const Usuarios = () => {
   );
 };
 
-export default Usuarios;
+export default Clientes;

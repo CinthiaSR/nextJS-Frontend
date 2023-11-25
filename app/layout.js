@@ -1,8 +1,14 @@
-import {Inter} from "next/font/google";
+import {Lato} from "next/font/google";
+const inter = Lato({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
 import "./globals.css";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Header from "@/components/Header";
-const inter = Inter({subsets: ["latin"]});
+// const inter = Inter({subsets: ["latin"]});
 
 export const metadata = {
   title: "Create Next App",
@@ -12,18 +18,26 @@ export const metadata = {
 export default function RootLayout({children}) {
   return (
     <html lang="en">
-      <div className="min-h-screen grid grid-cols-1 lg:grid-cols-6">
-        {/* sidebar */}
+      {/* <div className="min-h-screen grid grid-cols-1 lg:grid-cols-6">
         <Sidebar />
-        {/* PANEL */}
         <div className="col-span-5">
-          {/* <Header /> */}
           <Header />
-          {/* contenido */}
           <div className={`bg-gray-100${inter.className}`}>{children}</div>
         </div>
-      </div>
+      </div> */}
       {/* <body className={inter.className}>{children}</body> */}
+      <body>
+        <div className="min-h-screen grid grid-cols-1 lg:grid-cols-6">
+          <Sidebar />
+          <div className="col-span-5 flex-1 overflow-y-auto">
+            <Header />
+            <div
+              className={`bg-gray-100${inter.className} mt-20 lg:mt-12 md:mt-18`}>
+              {children}
+            </div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
