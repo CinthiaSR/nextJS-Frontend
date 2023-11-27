@@ -29,7 +29,7 @@ export const Sidebar = () => {
     <>
       {/* sidebar */}
       <div
-        className={`fixed lg:static top-0 w-[40%] md:w-[50%] lg:w-full z-1 bg-gray-300 transition-all ${
+        className={`fixed lg:static top-0 w-[40%] md:w-[50%] lg:w-full z-50 bg-gray-300 transition-all ${
           sidebar ? "-left-0" : "-left-full"
         } w-full h-full overflow-y-scroll col-span-1 p-8`}>
         {/* logo */}
