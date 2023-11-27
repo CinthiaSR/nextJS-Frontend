@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <>
       {/* <header className="fixed bg-[#7C081A] flex flex-col md:flex-row items-center p-4 lg:pl-8 w-full z-50"> */}
-      <header className="fixed bg-[#7C081A] flex items-center justify-between w-full p-4 pr-10">
+      <header className="fixed bg-[#7C081A] flex items-center justify-between w-full p-4 pr-10 z-50">
         {/* notifications */}
         <div className="flex gap-2 items-center justify-between lg:w-[83%] w-[100%]">
           <h3 className="text-white text-x flex items-center gap-2">

@@ -32,7 +32,7 @@ export default function RootLayout({children}) {
           <div className="col-span-5 flex-1 overflow-y-auto">
             <Header />
             <div
-              className={`bg-gray-100${inter.className} mt-20 lg:mt-12 md:mt-18`}>
+              className={`bg-gray-100${inter.className} pt-14 lg:pt-12 md:pt-14`}>
               {children}
             </div>
           </div>
